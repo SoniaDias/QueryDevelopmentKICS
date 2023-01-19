@@ -1,0 +1,11 @@
+{
+  "id": "e9a6a383-1878-412d-8c86-f11e4ea64f3a",
+  "queryName": "Query Development Training Encryption Disabled",
+  "severity": "HIGH",
+  "category": "Encryption",
+  "descriptionText": "Terraform AWS resources with the field 'encrypted' should set it to true",
+  "descriptionUrl": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs",
+  "platform": "Terraform",
+  "descriptionID": "1b28c4cc",
+  "cloudProvider": "aws"
+}

@@ -1,0 +1,3 @@
+docker pull checkmarx/kics:latest
+
+docker run -v /YOUR_PATH_TO_THE_QUERY:/query checkmarx/kics:latest scan -p /query -q /query --no-progress

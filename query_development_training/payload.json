@@ -1,0 +1,102 @@
+{
+	"document": [
+		{
+			"id": "360292bf-5f44-492a-aa8d-f13f7147bce9",
+			"resource": {
+				"aws_ebs_volume": {
+					"negative1": {
+						"availability_zone": "us-west-2a",
+						"encrypted": true,
+						"size": 40,
+						"tags": {
+							"Name": "HelloWorld"
+						}
+					}
+				}
+			},
+			"file": "C:/CxCode/CxKICS/kics/assets/queries/terraform/aws/query_development_training_encryption_disabled/test/negative1.tf"
+		},
+		{
+			"id": "91613d64-7f34-4a8a-9f06-37fe28d4beeb",
+			"resource": {
+				"aws_launch_configuration": {
+					"negative2": {
+						"ebs_block_device": {
+							"device_name": "/dev/xvda1",
+							"encrypted": true
+						},
+						"image_id": "${data.aws_ami.ubuntu.id}",
+						"instance_type": "m4.large",
+						"lifecycle": {
+							"create_before_destroy": true
+						},
+						"spot_price": "0.001",
+						"user_data_base64": "c29tZUtleQ=="
+					}
+				}
+			},
+			"file": "C:/CxCode/CxKICS/kics/assets/queries/terraform/aws/query_development_training_encryption_disabled/test/negative2.tf"
+		},
+		{
+			"id": "c641ec21-df5a-4d06-a0bd-a40b39f0a63d",
+			"resource": {
+				"aws_ebs_volume": {
+					"negative3": {
+						"availability_zone": "us-west-2a",
+						"encrypted": true,
+						"size": 40,
+						"tags": {
+							"Name": "HelloWorld"
+						}
+					}
+				}
+			},
+			"file": "C:/CxCode/CxKICS/kics/assets/queries/terraform/aws/query_development_training_encryption_disabled/test/negative3.tf"
+		},
+		{
+			"file": "C:/CxCode/CxKICS/kics/assets/queries/terraform/aws/query_development_training_encryption_disabled/test/positive1.tf",
+			"id": "f50fdcb0-445d-430b-bbf0-83c11312d322",
+			"resource": {
+				"aws_ebs_volume": {
+					"positive1": {
+						"availability_zone": "us-west-2a",
+						"encrypted": false,
+						"size": 40,
+						"tags": {
+							"Name": "HelloWorld"
+						}
+					}
+				}
+			}
+		},
+		{
+			"id": "0b62c7c4-3b8a-4d9f-b25f-4a3fd2110e2c",
+			"resource": {
+				"aws_launch_configuration": {
+					"positive2": {
+						"encrypted": false,
+						"image_id": "${data.aws_ami.ubuntu.id}",
+						"instance_type": "t2.micro",
+						"name": "web_config"
+					}
+				}
+			},
+			"file": "C:/CxCode/CxKICS/kics/assets/queries/terraform/aws/query_development_training_encryption_disabled/test/positive2.tf"
+		},
+		{
+			"id": "98cfe02b-35f8-4bb8-a183-3f5fd2ab4f73",
+			"resource": {
+				"aws_efs_file_system": {
+					"positive3": {
+						"creation_token": "my-product",
+						"encrypted": false,
+						"tags": {
+							"Name": "MyProduct"
+						}
+					}
+				}
+			},
+			"file": "C:/CxCode/CxKICS/kics/assets/queries/terraform/aws/query_development_training_encryption_disabled/test/positive3.tf"
+		}
+	]
+}
